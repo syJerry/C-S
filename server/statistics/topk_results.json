@@ -1,0 +1,668 @@
+{
+  "test_time": "2026-04-20T15:56:53.878657",
+  "total_cases": 6,
+  "summary": {
+    "avg_precision": 0.7083,
+    "avg_recall": 1.0,
+    "avg_similarity": 0.6896,
+    "avg_retrieval_time_ms": 449.95
+  },
+  "results": [
+    {
+      "query": "网络安全的定义？",
+      "description": "测试最佳k值",
+      "k": 2,
+      "retrieval_time_ms": 591.76,
+      "retrieved_count": 2,
+      "relevant_count": 2,
+      "total_relevant": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "avg_similarity": 0.6504,
+      "documents": [
+        {
+          "index": 1,
+          "relevant": true,
+          "similarity": 0.5693,
+          "content_preview": "#### **细节和调试**\n\n- `-v` 信息详细程度- `-d [level]` debug level- `--packet-trace` 跟踪发送和接收的报文- `--iflist` 列举接口和路由\n\n- `-d [level]` debug level\n\n- `--packet-trace` 跟踪发送和接收的报文\n\n- `--iflist` 列举接口和路由\n\n",
+          "metadata": {}
+        },
+        {
+          "index": 2,
+          "relevant": true,
+          "similarity": 0.7315,
+          "content_preview": "### **1.3.1 网络安全定义**\n\n网络安全的一个通用定义指网络信息系统的硬件、软件及其系统中的数据受到保护，不因偶然的或者恶意的 破坏、更改、泄露，系统能连续、可靠、正常地运行，服务不中断。网络安全简单的说是在网络环境下能够 识别和消除不安全因素的能力。网络安全在不同环境和应用中有不同的解释，例如系统运行的安全、系统信息内容的安全、信息通信与传播 的安全等。网络安全的基本需求包括可靠性、",
+          "metadata": {}
+        }
+      ],
+      "llm_judgments": [
+        true,
+        true
+      ]
+    },
+    {
+      "query": "计算机网络中七层模型具体是什么？",
+      "description": "测试最佳k值",
+      "k": 6,
+      "retrieval_time_ms": 407.66,
+      "retrieved_count": 6,
+      "relevant_count": 6,
+      "total_relevant": 6,
+      "precision": 1.0,
+      "recall": 1.0,
+      "avg_similarity": 0.6774,
+      "documents": [
+        {
+          "index": 1,
+          "relevant": true,
+          "similarity": 0.711,
+          "content_preview": "### **5.7.1 简介**\n\nASP 是动态服务器页面 (Active Server Page)，是微软开发的类似 CGI 脚本程序的一种应用，其网页文件的 格式是 `.asp` 。\n\n",
+          "metadata": {}
+        },
+        {
+          "index": 2,
+          "relevant": true,
+          "similarity": 0.7862,
+          "content_preview": "#### **简介**\n\nOSI（Open System Interconnection）共分为物理层、数据链路层、网络层、传输层、会话层、表示层、应用 层七层，其具体的功能如下。\n\n",
+          "metadata": {}
+        },
+        {
+          "index": 3,
+          "relevant": true,
+          "similarity": 0.6166,
+          "content_preview": "#### **简介**\n\nApache Shiro 是一个功能强大且易于使用的 Java 安全框架，功能包括身份验证，授权，加密和会话管理。\n\n",
+          "metadata": {}
+        },
+        {
+          "index": 4,
+          "relevant": true,
+          "similarity": 0.687,
+          "content_preview": "## **钻石 (Diamond) 模型**\n\n钻石模型由网络情报分析与威胁研究中心 (The Center for Cyber Intelligence Anaysis and Threat Research， CCIATR) 机构的 Sergio Catagirone 等人在 2013 年提出。该模型把所有的安全事件 (Event) 分为四个核心元素，即敌手 (Adversary)，能力 (C",
+          "metadata": {}
+        },
+        {
+          "index": 5,
+          "relevant": true,
+          "similarity": 0.6281,
+          "content_preview": "#### **定时任务**\n\nWindows 下有 `schtasks` 和 `at` 两种计划任务机制。其中 `at` 在较高版本的 Windows 中已经弃用。设置命令为 `schtasks /create /tn \"TEST_OnLogon\" /sc onlogon /tr \"cmd.exe /c calc.exe\"` 、 `schtasks /create /tn \"TEST_OnStar",
+          "metadata": {}
+        },
+        {
+          "index": 6,
+          "relevant": true,
+          "similarity": 0.6354,
+          "content_preview": "#### **AIO**\n\nAIO (Asynchronous I/O) 在 Java 7 中引入，是 NIO 的改进版，是异步非阻塞的 IO 模型，基于事件和回调 机制实现。\n\n",
+          "metadata": {}
+        }
+      ],
+      "llm_judgments": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "query": "TCP协议的三次握手和四次挥手的过程？",
+      "description": "测试最佳k值",
+      "k": 10,
+      "retrieval_time_ms": 395.25,
+      "retrieved_count": 10,
+      "relevant_count": 6,
+      "total_relevant": 6,
+      "precision": 0.6,
+      "recall": 1.0,
+      "avg_similarity": 0.7315,
+      "documents": [
+        {
+          "index": 1,
+          "relevant": true,
+          "similarity": 0.6949,
+          "content_preview": "#### **url 编码绕过**\n\n如果 WAF 中是字符串匹配，可以使用 url 多次编码的方式可以绕过\n\n",
+          "metadata": {}
+        },
+        {
+          "index": 2,
+          "relevant": false,
+          "similarity": 0.8267,
+          "content_preview": "#### **四次挥手**\n\n四次挥手（Four-Way Wavehand）指断开一个 TCP 连接时，需要客户端和服务端总共发送 4 个包以确认连 接的断开。第一次挥手客户端发送一个 FIN ，用来关闭客户端到服务端的数据传送，客户端进入 FIN_WAIT_1 状态。 第二次挥手服务端收到 FIN 后，发送一个 ACK 给客户端，确认序号为收到序号 +1，服务端进入 CLOSE_WAIT 状态。",
+          "metadata": {}
+        },
+        {
+          "index": 3,
+          "relevant": true,
+          "similarity": 0.7034,
+          "content_preview": "#### **HTML 过滤**\n\n使用一些白名单或者黑名单来过滤用户输入的 HTML，以实现过滤的效果。例如 DOMPurify 等工具都是用 该方式实现了 XSS 的保护。\n\n",
+          "metadata": {}
+        },
+        {
+          "index": 4,
+          "relevant": true,
+          "similarity": 0.7948,
+          "content_preview": "#### **握手协议**\n\n握手协议 (Handshake Protocol) 是 TLS 里最复杂的子协议，在握手过程中协商 TLS 版本号、随机数、密码 套件等信息，然后交换证书和密钥参数，最终双方协商得到会话密钥，用于后续的混合加密系统。\n\n",
+          "metadata": {}
+        },
+        {
+          "index": 5,
+          "relevant": true,
+          "similarity": 0.6796,
+          "content_preview": "#### • **缓冲区溢出**\n\n- 一些 C 语言的 WAF 处理的字符串长度有限，超出某个长度后的 payload 可能不会被处理- 二次注入有长度限制时，通过多句执行的方法改掉数据库该字段的长度绕过\n\n- 二次注入有长度限制时，通过多句执行的方法改掉数据库该字段的长度绕过\n\n",
+          "metadata": {}
+        },
+        {
+          "index": 6,
+          "relevant": false,
+          "similarity": 0.754,
+          "content_preview": "### **12.8.3 TCP Flood**\n\nTCP Flood 是一种利用 TCP 协议缺陷的攻击，这种方式通过伪造 IP 向攻击服务器发送大量伪造的 TCP SYN 请求，被攻击服务器回应握手包后（SYN+ACK），因为伪造的 IP 不会回应之后的握手包，服务器会 保持在 SYN_RECV 状态，并尝试重试。这会使得 TCP 等待连接队列资源耗尽，正常业务无法进行。\n\n",
+          "metadata": {}
+        },
+        {
+          "index": 7,
+          "relevant": true,
+          "similarity": 0.6387,
+          "content_preview": "#### **FQDN**\n\nFQDN (Fully-Qualified Domain Name) 是域名的完全形态，主要是包含零长度的根标签，例如 `www.example. com.` 。\n\n",
+          "metadata": {}
+        },
+        {
+          "index": 8,
+          "relevant": false,
+          "similarity": 0.7792,
+          "content_preview": "#### **FIN 扫描**\n\nFIN 扫描是向目标发送一个 FIN 数据包，如果是开放的端口，会返回 RST 数据包，关闭的端口则不会返回 数据包，可以通过这种方式来判断端口是否打开。这种方式并不在 TCP 三次握手的状态中，所以不会被记录，相对 SYN 扫描要更隐蔽一些。\n\n这种方式并不在 TCP 三次握手的状态中，所以不会被记录，相对 SYN 扫描要更隐蔽一些。\n\n",
+          "metadata": {}
+        },
+        {
+          "index": 9,
+          "relevant": false,
+          "similarity": 0.6935,
+          "content_preview": "### **5.7.1 简介**\n\nASP 是动态服务器页面 (Active Server Page)，是微软开发的类似 CGI 脚本程序的一种应用，其网页文件的 格式是 `.asp` 。\n\n",
+          "metadata": {}
+        },
+        {
+          "index": 10,
+          "relevant": true,
+          "similarity": 0.7503,
+          "content_preview": "#### **HTTP 1.0**\n\n1996 年 5 月，HTTP/1.0 版本发布，丰富了传输的格式和内容，还引入了 POST、HEAD 两个动词。从 1.0 开始，必须在尾部添加协议版本。在 1.0 中，也引入了状态码 (status code)、多字符集支持、多部分发送 (multi-part type)、权限 (authorization)、缓存 (cache)、内容编码 (conten",
+          "metadata": {}
+        }
+      ],
+      "llm_judgments": [
+        true,
+        false,
+        true,
+        true,
+        true,
+        false,
+        true,
+        false,
+        false,
+        true
+      ]
+    },
+    {
+      "query": "DNS过程有哪些攻击方式？",
+      "description": "测试最佳k值",
+      "k": 14,
+      "retrieval_time_ms": 422.35,
+      "retrieved_count": 14,
+      "relevant_count": 7,
+      "total_relevant": 7,
+      "precision": 0.5,
+      "recall": 1.0,
+      "avg_similarity": 0.7173,
+      "documents": [
+        {
+          "index": 1,
+          "relevant": true,
+          "similarity": 0.6722,
+          "content_preview": "#### **细节和调试**\n\n- `-v` 信息详细程度- `-d [level]` debug level- `--packet-trace` 跟踪发送和接收的报文- `--iflist` 列举接口和路由\n\n- `-d [level]` debug level\n\n- `--packet-trace` 跟踪发送和接收的报文\n\n- `--iflist` 列举接口和路由\n\n",
+          "metadata": {}
+        },
+        {
+          "index": 2,
+          "relevant": false,
+          "similarity": 0.7701,
+          "content_preview": "### **3.2.9 Passive DNS**\n\nPassive DNS 被动的从递归域名服务器记录来自不同域名服务器的响应，形成数据库。利用 Passive DNS 数 据库可以知道域名曾绑定过哪些 IP，IP 曾关联到哪些域名，域名最早/最近出现的时间，为测试提供较大的 帮助。Virustotal、passivetotal、CIRCL 等网站都提供了 Passive DNS 数据库的查询。",
+          "metadata": {}
+        },
+        {
+          "index": 3,
+          "relevant": false,
+          "similarity": 0.6969,
+          "content_preview": "### **9.5.3 安全问题**\n\n- 源于 ssl 模式下的认证可选性，可以删除签名方式标签绕过认证- 如果 SAML 中缺少了 expiration，并且断言 ID 不是唯一的，那么就可能被重放攻击影响\n\n- 如果 SAML 中缺少了 expiration，并且断言 ID 不是唯一的，那么就可能被重放攻击影响\n\n",
+          "metadata": {}
+        },
+        {
+          "index": 4,
+          "relevant": true,
+          "similarity": 0.6633,
+          "content_preview": "### **12.7.3 完美哈希**\n\n完美哈希 (Perfect Hashing) 是指在哈希计算过程中，不会出现冲突，也就是说哈希函数是一个完全单射函 数。完美哈希实际是静态的，要求实现知道需要哈希哪些数据，并使用较长时间来建立索引，也无法实时更新。 目前已有的完美哈希函数有 FCH、CHD、PTHash 等。\n\n完美哈希实际是静态的，要求实现知道需要哈希哪些数据，并使用较长时间来建立索引，",
+          "metadata": {}
+        },
+        {
+          "index": 5,
+          "relevant": false,
+          "similarity": 0.7161,
+          "content_preview": "### **5.7.1 简介**\n\nASP 是动态服务器页面 (Active Server Page)，是微软开发的类似 CGI 脚本程序的一种应用，其网页文件的 格式是 `.asp` 。\n\n",
+          "metadata": {}
+        },
+        {
+          "index": 6,
+          "relevant": false,
+          "similarity": 0.7159,
+          "content_preview": "## **阶段 3：设计**\n\n在设计阶段确定安全的最低可接受级别。考虑项目涉及到哪些攻击面、是否能减小攻击面。 对项目进行威胁建模，明确可能来自的攻击有哪些方面，并考虑项目哪些部分需要进行渗透测试。\n\n",
+          "metadata": {}
+        },
+        {
+          "index": 7,
+          "relevant": true,
+          "similarity": 0.6913,
+          "content_preview": "#### **CVE-2016-20012**\n\nCVE-2016-20012 允许客户端在只知道公钥信息的情况下通过 SSH_MSG_USERAUTH_REQUEST 遍历 客户端是否可以通过某个 < 用户, 公钥 > 对登录。由于 OpenSSH 的开发者认为修改相关的认证方式会需要需要增加 client 读取私钥的频度，因此没有对应进 行修复。相关的讨论可以参考这个 PR 。\n\n由于 Ope",
+          "metadata": {}
+        },
+        {
+          "index": 8,
+          "relevant": true,
+          "similarity": 0.8188,
+          "content_preview": "#### **DNS 劫持**\n\nDNS 劫持有多种方式，比较早期的攻击方式是通过攻击域名解析服务器，或是伪造 DNS 响应的方法，来将 域名解析到恶意的 IP 地址。随着互联网应用的不断发展，出现了基于废弃记录的劫持方式。这种方式发生的场景是次级域名的解析记录 指向第三方资源，而第三方资源被释放后，解析记录并没有取消，在这种场景下，可以对应申请第三方资源， 以获取控制解析记录的能力。\n\n随着互联",
+          "metadata": {}
+        },
+        {
+          "index": 9,
+          "relevant": true,
+          "similarity": 0.6902,
+          "content_preview": "#### **.user.ini**\n\n在 php 执行的过程中，除了主 `php.ini` 之外，PHP 还会在每个目录下扫描 INI 文件，从被执行的 PHP 文件 所在目录开始一直上升到 web 根目录（$_SERVER[’DOCUMENT_ROOT’] 所指定的）。如果被执行的 PHP 文件在 web 根目录之外，则只扫描该目录。 `.user.ini` 中可以定义除了 PHP_INI_S",
+          "metadata": {}
+        },
+        {
+          "index": 10,
+          "relevant": false,
+          "similarity": 0.7839,
+          "content_preview": "### **2.6.5 加密方案**\n\n作为主流的防御方案，DNS 加密有五种方案，分别是 DNS-over-TLS (DoT)、DNS-over-DTLS、DNS-overHTTPS (DoH)、DNS-over-QUIC 以及 DNSCrypt。\n\n#### **DoT**\n\nDoT 方案在 2016 年发表于 RFC7858，使用 853 端口。主要思想是 Client 和 Server 通",
+          "metadata": {}
+        },
+        {
+          "index": 11,
+          "relevant": false,
+          "similarity": 0.6587,
+          "content_preview": "#### **FQDN**\n\nFQDN (Fully-Qualified Domain Name) 是域名的完全形态，主要是包含零长度的根标签，例如 `www.example. com.` 。\n\n",
+          "metadata": {}
+        },
+        {
+          "index": 12,
+          "relevant": true,
+          "similarity": 0.7253,
+          "content_preview": "#### **解析过程**\n\nDNS 解析过程是递归查询的，具体过程如下：- 用户要访问域名 www.example.com 时，先查看本机 hosts 是否有记录或者本机是否有 DNS 缓存，如 果有，直接返回结果，否则向递归服务器查询该域名的 IP 地址- 递归缓存为空时，首先向根服务器查询 com 顶级域的 IP 地址- 根服务器告知递归服务器 com 顶级域名服务器的 IP 地址- 递归向",
+          "metadata": {}
+        },
+        {
+          "index": 13,
+          "relevant": true,
+          "similarity": 0.7362,
+          "content_preview": "#### **SPF 记录**\n\nSPF (Sender Policy Framework) 是为了防止垃圾邮件而提出来的一种 DNS 记录类型，是一种 TXT 类型的 记录，用于登记某个域名拥有的用来外发邮件的所有 IP 地址。通过 SPF 记录可以获取相关的 IP 信息，常 用命令为 `dig example.com txt` 。\n\n",
+          "metadata": {}
+        },
+        {
+          "index": 14,
+          "relevant": false,
+          "similarity": 0.7034,
+          "content_preview": "### **12.1.3 自动化审计**\n\n一般认为一个漏洞的触发过程是从输入经过过滤到危险函数的过程 (Source To Sink)，而审计就是寻找这个 链条的过程。常见的自动化审计方案有危险函数匹配、控制流分析等。\n\n#### **危险函数匹配**\n\n白盒审计最常见的方式是通过搜寻危险函数与危险参数定位漏洞，比较有代表性的工具是 Seay 开发的审计 工具。这种方法误报率相当高，这是因为这种",
+          "metadata": {}
+        }
+      ],
+      "llm_judgments": [
+        true,
+        false,
+        false,
+        true,
+        false,
+        false,
+        true,
+        true,
+        true,
+        false,
+        false,
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "query": "HTTP不同版本都有哪些特点？",
+      "description": "测试最佳k值",
+      "k": 18,
+      "retrieval_time_ms": 382.75,
+      "retrieved_count": 18,
+      "relevant_count": 18,
+      "total_relevant": 18,
+      "precision": 1.0,
+      "recall": 1.0,
+      "avg_similarity": 0.7125,
+      "documents": [
+        {
+          "index": 1,
+          "relevant": true,
+          "similarity": 0.7516,
+          "content_preview": "## **利用 IPv6**\n\n有些服务没有考虑 IPv6 的情况，但是内网又支持 IPv6，则可以使用 IPv6 的本地 IP 如 `[::] 0000::1` 或 IPv6 的内网域名来绕过过滤。\n\n",
+          "metadata": {}
+        },
+        {
+          "index": 2,
+          "relevant": true,
+          "similarity": 0.7064,
+          "content_preview": "### **3.2.9 Passive DNS**\n\nPassive DNS 被动的从递归域名服务器记录来自不同域名服务器的响应，形成数据库。利用 Passive DNS 数 据库可以知道域名曾绑定过哪些 IP，IP 曾关联到哪些域名，域名最早/最近出现的时间，为测试提供较大的 帮助。Virustotal、passivetotal、CIRCL 等网站都提供了 Passive DNS 数据库的查询。",
+          "metadata": {}
+        },
+        {
+          "index": 3,
+          "relevant": true,
+          "similarity": 0.6705,
+          "content_preview": "### **9.5.3 安全问题**\n\n- 源于 ssl 模式下的认证可选性，可以删除签名方式标签绕过认证- 如果 SAML 中缺少了 expiration，并且断言 ID 不是唯一的，那么就可能被重放攻击影响\n\n- 如果 SAML 中缺少了 expiration，并且断言 ID 不是唯一的，那么就可能被重放攻击影响\n\n",
+          "metadata": {}
+        },
+        {
+          "index": 4,
+          "relevant": true,
+          "similarity": 0.7278,
+          "content_preview": "### **11.3.3 tcpflow**\n\ntcpflow 也是一个抓包工具，它的特点是以流为单位显示数据内容，在分析 HTTP 等协议的数据时候，用 tcpflow 会更便捷。\n\n#### **命令行常用选项**\n\n- `-b max_bytes` 定义最大抓取流量- `-e name` 指定解析的 scanner- `-i interface` 指定抓取接口- `-o outputdir`",
+          "metadata": {}
+        },
+        {
+          "index": 5,
+          "relevant": true,
+          "similarity": 0.7105,
+          "content_preview": "#### **url 编码绕过**\n\n如果 WAF 中是字符串匹配，可以使用 url 多次编码的方式可以绕过\n\n",
+          "metadata": {}
+        },
+        {
+          "index": 6,
+          "relevant": true,
+          "similarity": 0.7012,
+          "content_preview": "## **阶段 3：设计**\n\n在设计阶段确定安全的最低可接受级别。考虑项目涉及到哪些攻击面、是否能减小攻击面。 对项目进行威胁建模，明确可能来自的攻击有哪些方面，并考虑项目哪些部分需要进行渗透测试。\n\n",
+          "metadata": {}
+        },
+        {
+          "index": 7,
+          "relevant": true,
+          "similarity": 0.7302,
+          "content_preview": "#### **沙箱**\n\n- Python 沙箱通用绕过- 一文看懂 Python 沙箱逃逸\n\n- 一文看懂 Python 沙箱逃逸\n\n",
+          "metadata": {}
+        },
+        {
+          "index": 8,
+          "relevant": true,
+          "similarity": 0.8112,
+          "content_preview": "#### **HTTP 1.1**\n\n1997 年 1 月，HTTP/1.1 版本发布，进一步完善了 HTTP 协议。1.1 版本主要是引入了持久连接、管道机 制、Content-Length、分块传输编码等内容。管道机制即在同一个 TCP 连接里面，客户端可以同时发送多 个请求，这样就改进了 HTTP 协议的效率。PUT、PATCH、HEAD、OPTIONS、DELETE 等动词方法也 是在 H",
+          "metadata": {}
+        },
+        {
+          "index": 9,
+          "relevant": true,
+          "similarity": 0.7052,
+          "content_preview": "### **3.5.1 搜索引擎处理流程**\n\n- **数据预处理**- 长度截断- 大小写转化- 去标点符号- 简繁转换- 数字归一化，中文数字、阿拉伯数字、罗马字- 同义词改写- 拼音改写- **处理**- 分词- 关键词抽取- 非法信息过滤\n\n- 长度截断\n\n- 大小写转化\n\n- 去标点符号\n\n- 简繁转换\n\n- 数字归一化，中文数字、阿拉伯数字、罗马字\n\n- 同义词改写\n\n- 拼音改写\n\n",
+          "metadata": {}
+        },
+        {
+          "index": 10,
+          "relevant": true,
+          "similarity": 0.7002,
+          "content_preview": "### **12.10.3 持续性（Persistent）**\n\n和传统的基于短期利益的网络攻击有很大的不同。APT 攻击的过程通常包括多个实施阶段。攻击者很很多情 况下都是使用逐层渗透的方式来突破高级的防御系统，整个攻击过程一般持续时间会达到几个月甚至数年。 一般来说，APT 攻击可以分为以下几个阶段。\n\n#### **侦查阶段**\n\n为了能够找到目标的脆弱点，攻击者通常会做大量的准备工作。在这",
+          "metadata": {}
+        },
+        {
+          "index": 11,
+          "relevant": true,
+          "similarity": 0.7299,
+          "content_preview": "### **12.1.1 简介**\n\n代码审计是找到应用缺陷的过程。其通常有白盒审计、黑盒审计、灰盒审计等方式。白盒审计指通过对源代 码的分析找到应用缺陷，黑盒审计通常不涉及到源代码，多使用模糊测试的方式，而灰盒审计则是黑白结合 的方式。三种不同的测试方法有不同的优缺点。\n\n",
+          "metadata": {}
+        },
+        {
+          "index": 12,
+          "relevant": true,
+          "similarity": 0.7023,
+          "content_preview": "#### **执行队列**\n\nJavaScript 中的异步运行机制如下：- 所有同步任务都在主线程上执行，形成一个执行栈- 主线程之外，还存在一个任务队列。只要异步任务有了运行结果，就在任务队列之中放置一个事件。- 一旦执行栈中的所有同步任务执行完毕，系统就会读取任务队列，看看里面有哪些事件。那些对应的 异步任务，于是结束等待状态，进入执行栈，开始执行。- 主线程不断重复上面的第三步。其中浏览器",
+          "metadata": {}
+        },
+        {
+          "index": 13,
+          "relevant": true,
+          "similarity": 0.6732,
+          "content_preview": "#### **CVE-2020-13933**\n\nApache Shiro 1.6.0 之前的版本，由于 Shiro 拦截器与 requestURI 的匹配流程与 Web 框架的拦截器的匹配 流程有差异，攻击者构造一个特殊的 http 请求，可以绕过 Shiro 的认证，未授权访问敏感路径。\n\n",
+          "metadata": {}
+        },
+        {
+          "index": 14,
+          "relevant": true,
+          "similarity": 0.7469,
+          "content_preview": "#### **TE-TE**\n\nTE-TE 指前后端服务器都处理 `Transfer-Encoding` 请求头，但是在容错性上表现不同，例如有的服务器可 能会处理 `Transfer-encoding` ，测试例如：```\nPOST/HTTP/1.1\\r\\n\nHost:example.com\\r\\n\n...\nContent-length:4\\r\\n\nTransfer-Encoding:chunk",
+          "metadata": {}
+        },
+        {
+          "index": 15,
+          "relevant": true,
+          "similarity": 0.6667,
+          "content_preview": "#### **CVE-2020-1957**\n\nApache Shiro 1.5.2 之前的版本，由于 Shiro 拦截器与 requestURI 的匹配流程与 Web 框架的拦截器的匹配 流程有差异，攻击者构造一个特殊的 http 请求，可以绕过 Shiro 的认证，未授权访问敏感路径。\n\n",
+          "metadata": {}
+        },
+        {
+          "index": 16,
+          "relevant": true,
+          "similarity": 0.6395,
+          "content_preview": "### **2.5.1 简介**\n\n路由算法是用于找到一条从源路由器到目的路由器的最佳路径的算法。存在着多种路由算法，每种算法对网 络和路由器资源的影响都不同；由于路由算法使用多种度量标准 (metric)，所以不同路由算法的最佳路径选 择也有所不同。\n\n",
+          "metadata": {}
+        },
+        {
+          "index": 17,
+          "relevant": true,
+          "similarity": 0.6327,
+          "content_preview": "#### **简介**\n\nApache Shiro 是一个功能强大且易于使用的 Java 安全框架，功能包括身份验证，授权，加密和会话管理。\n\n",
+          "metadata": {}
+        },
+        {
+          "index": 18,
+          "relevant": true,
+          "similarity": 0.8189,
+          "content_preview": "#### **HTTP 1.0**\n\n1996 年 5 月，HTTP/1.0 版本发布，丰富了传输的格式和内容，还引入了 POST、HEAD 两个动词。从 1.0 开始，必须在尾部添加协议版本。在 1.0 中，也引入了状态码 (status code)、多字符集支持、多部分发送 (multi-part type)、权限 (authorization)、缓存 (cache)、内容编码 (conten",
+          "metadata": {}
+        }
+      ],
+      "llm_judgments": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "query": "三层隧道加密协议是什么？具体是由什么构成？",
+      "description": "测试最佳k值",
+      "k": 20,
+      "retrieval_time_ms": 499.91,
+      "retrieved_count": 20,
+      "relevant_count": 3,
+      "total_relevant": 3,
+      "precision": 0.15,
+      "recall": 1.0,
+      "avg_similarity": 0.6484,
+      "documents": [
+        {
+          "index": 1,
+          "relevant": true,
+          "similarity": 0.6152,
+          "content_preview": "#### **映像劫持**\n\n在高版本的 Windows 中，替换程序是受到系统保护的，需要使用其他的技巧来实现替换。具体操作为在注册表的 `HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Option` 下添加项 `sethc.exe` ，然后在 `sethc.exe` 这个",
+          "metadata": {}
+        },
+        {
+          "index": 2,
+          "relevant": true,
+          "similarity": 0.6127,
+          "content_preview": "### **4.16.2 漏洞成因**\n\n当代理服务器设置为缓存静态文件并忽略这类文件的 caching header 时，访问 `http://www.example.com/ home.php/no-existent.css` 时，会发生什么呢？整个响应流程如下：1. 浏览器请求 `http://www.example.com/home.php/no-existent.css` ;2. 服务器",
+          "metadata": {}
+        },
+        {
+          "index": 3,
+          "relevant": true,
+          "similarity": 0.6383,
+          "content_preview": "### **3.6.3 钓鱼**\n\n基于之前收集到的信息，可以使用 Office/CHM/RAR/EXE/快捷方式等文件格式制作钓鱼邮件发送至目标， 进一步收集信息。其中 Office 可以使用 Office 漏洞、宏、OLE 对象、PPSX 等方式构造利用文件。Exe 可以使用特殊的 Unicode 控制字符如 RLO (Right-to-Left Override) 等来构建容易混淆的文件名。",
+          "metadata": {}
+        },
+        {
+          "index": 4,
+          "relevant": false,
+          "similarity": 0.721,
+          "content_preview": "#### **总结**\n\n低三层模型属于通信子网，涉及为用户间提供透明连接，操作主要以每条链路（hop-by-hop）为基础，在节 点间的各条数据链路上进行通信。由网络层来控制各条链路上的通信，但要依赖于其他节点的协调操作。高三层属于资源子网，主要涉及保证信息以正确可理解形式传送。传输层是高三层和低三层之间的接口，它是第一个端到端的层次，保证透明的端到端连接，满足用户的服务 质量（QoS）要求，并",
+          "metadata": {}
+        },
+        {
+          "index": 5,
+          "relevant": false,
+          "similarity": 0.6322,
+          "content_preview": "#### **简介**\n\nApache Shiro 是一个功能强大且易于使用的 Java 安全框架，功能包括身份验证，授权，加密和会话管理。\n\n",
+          "metadata": {}
+        },
+        {
+          "index": 6,
+          "relevant": false,
+          "similarity": 0.7119,
+          "content_preview": "### **2.11.1 简介**\n\nIPsec（IP Security）是 IETF 制定的三层隧道加密协议，它为 Internet 上传输的数据提供了高质量的、可互 操作的、基于密码学的安全保证。特定的通信方之间在 IP 层通过加密与数据源认证等方式，提供了以下的 安全服务：- **数据机密性（Confidentiality）**- IPsec 发送方在通过网络传输包前对包进行加密。- **数",
+          "metadata": {}
+        },
+        {
+          "index": 7,
+          "relevant": false,
+          "similarity": 0.6491,
+          "content_preview": "#### **危险函数匹配**\n\n白盒审计最常见的方式是通过搜寻危险函数与危险参数定位漏洞，比较有代表性的工具是 Seay 开发的审计 工具。这种方法误报率相当高，这是因为这种方法没有对程序的流程进行深入分析，另一方面，这种方式通 常是孤立地分析每一个文件，忽略了文件之间复杂的调用关系。具体的说，这种方式在一些环境下能做到几乎无漏报，只要审计者有耐心，可以发现大部分的漏洞，但是在 高度框架化的代码",
+          "metadata": {}
+        },
+        {
+          "index": 8,
+          "relevant": false,
+          "similarity": 0.6984,
+          "content_preview": "#### **常用技术**\n\nMPLS VPN：是一种基于 MPLS 技术的 IP VPN，是在网络路由和交换设备上应用 MPLS（多协议标记交 换）技术，简化核心路由器的路由选择方式，利用结合传统路由技术的标记交换实现的 IP 虚拟专用网络（IP VPN）。MPLS 优势在于将二层交换和三层路由技术结合起来，在解决 VPN、服务分类和流量工程这些 IP 网络的重大问题时具有很优异的表现。因此，M",
+          "metadata": {}
+        },
+        {
+          "index": 9,
+          "relevant": false,
+          "similarity": 0.6459,
+          "content_preview": "### **5.7.1 简介**\n\nASP 是动态服务器页面 (Active Server Page)，是微软开发的类似 CGI 脚本程序的一种应用，其网页文件的 格式是 `.asp` 。\n\n",
+          "metadata": {}
+        },
+        {
+          "index": 10,
+          "relevant": false,
+          "similarity": 0.6542,
+          "content_preview": "### **8.4.2 安全运营**\n\n- 我理解的安全运营 by 职业欠钱- 再谈安全运营 by 职业欠钱- 我们谈安全运营时在谈什么 by 聂君- 金融行业企业安全运营之路 by 聂君- 秦波：大型互联网应用安全 SDL 体系建设实践- 谭晓生：论 CISO 的个人修养- 赵彦的 CISO 闪电战两年甲方安全修炼之路- 胡珀谈安全运营 by lake2- 小步快跑，快速迭代：安全运营的器术法道",
+          "metadata": {}
+        },
+        {
+          "index": 11,
+          "relevant": false,
+          "similarity": 0.6707,
+          "content_preview": "#### **HTML 过滤**\n\n使用一些白名单或者黑名单来过滤用户输入的 HTML，以实现过滤的效果。例如 DOMPurify 等工具都是用 该方式实现了 XSS 的保护。\n\n",
+          "metadata": {}
+        },
+        {
+          "index": 12,
+          "relevant": false,
+          "similarity": 0.6902,
+          "content_preview": "#### **DNS 隧道**\n\nDNS 隧道工具将进入隧道的其他协议流量封装到 DNS 协议内，在隧道上传输。这些数据包出隧道时进行解 封装，还原数据。\n\n",
+          "metadata": {}
+        },
+        {
+          "index": 13,
+          "relevant": false,
+          "similarity": 0.6682,
+          "content_preview": "#### **Net-NTLMv2**\n\n- 自 Windows Vista 起，微软默认使用 Net-NTLMv2 协议，其基本流程如下：- 客户端向服务器发送一个请求- 服务器接收到请求后，生成一个 16 位的 Challenge，发送回客户端- 客户端接收到 Challenge 后，使用登录用户的密码 hash 对 Challenge 加密，作为 response 发送给服务 器- 服务器校",
+          "metadata": {}
+        },
+        {
+          "index": 14,
+          "relevant": false,
+          "similarity": 0.6101,
+          "content_preview": "#### **示例**\n\n```\nvarPerson=function(){};\nPerson.prototype.sayName=function(){\nalert(\"MyNameisJacky\");\n};\nPerson.prototype.age=27;\nvarp=newPerson();\np.sayName();\n```p 是一个引用指向 Person 的对象。我们在 Person 的原型上",
+          "metadata": {}
+        },
+        {
+          "index": 15,
+          "relevant": false,
+          "similarity": 0.5813,
+          "content_preview": "#### **基于特定目录的自启动**\n\n自启动目录， `C:\\Users\\Username\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup` 目录对特定用户生效， `C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\StartUp` 对所有用户 生效。在 NT6 以",
+          "metadata": {}
+        },
+        {
+          "index": 16,
+          "relevant": false,
+          "similarity": 0.663,
+          "content_preview": "#### **组成**\n\nDocker 引擎由如下主要组件构成：Docker 客户端（Docker Client）、Docker 守护进程（Docker daemon）、 containerd 以及 RunC，它们共同负责容器的创建和运行。Docker Client 是和 Docker Daemon 建立通信客户端，Docker Client 可以通过 http/unix socket 等方式 D",
+          "metadata": {}
+        },
+        {
+          "index": 17,
+          "relevant": false,
+          "similarity": 0.6337,
+          "content_preview": "#### **.user.ini**\n\n在 php 执行的过程中，除了主 `php.ini` 之外，PHP 还会在每个目录下扫描 INI 文件，从被执行的 PHP 文件 所在目录开始一直上升到 web 根目录（$_SERVER[’DOCUMENT_ROOT’] 所指定的）。如果被执行的 PHP 文件在 web 根目录之外，则只扫描该目录。 `.user.ini` 中可以定义除了 PHP_INI_S",
+          "metadata": {}
+        },
+        {
+          "index": 18,
+          "relevant": false,
+          "similarity": 0.6125,
+          "content_preview": "#### **Tomcat**\n\nTomcat 是一个轻量级应用服务器，在中小型系统和并发访问用户不是很多的场合下被普遍使用，用于开发 和调试 JSP 程序。在收到请求后，Tomcat 的处理流程如下：- 客户端访问 Web 服务器，发送 HTTP 请求- Web 服务器接收到请求后，传递给 Servlet 容器- Servlet 容器加载 Servlet，产生 Servlet 实例后，向其传递表",
+          "metadata": {}
+        },
+        {
+          "index": 19,
+          "relevant": false,
+          "similarity": 0.6202,
+          "content_preview": "#### **递归服务器**\n\n递归服务器负责接收用户的查询请求，进行递归查询并响应用户查询请求。在初始时递归服务器仅有记录了 根域名的 Hint 文件。\n\n",
+          "metadata": {}
+        },
+        {
+          "index": 20,
+          "relevant": false,
+          "similarity": 0.639,
+          "content_preview": "#### **JScript**\n\nJScript 是由微软开发的脚本语言，是微软对 ECMAScript 规范的实现，用于 IE 的早期版本中。\n\n",
+          "metadata": {}
+        }
+      ],
+      "llm_judgments": [
+        true,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    }
+  ]
+}

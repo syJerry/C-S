@@ -1,0 +1,16 @@
+{
+  "llm": {
+    "api_key": "ms-499a5dba-fe86-45a8-a92d-61dc36514685",
+    "base_url": "https://api-inference.modelscope.cn/v1",
+    "model": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+    "temperature": 0.2,
+    "embedding": "Qwen/Qwen3-Embedding-8B"
+  },
+  "data": {
+    "raw_data": "./data/blog_clean.pdf"
+  },
+  "vectorDB": {
+    "persist_dir": "./chroma_db_test",
+    "embedding_batch": 150
+  }
+}
