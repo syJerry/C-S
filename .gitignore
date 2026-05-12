@@ -2,3 +2,4 @@
 ./client/.idea
 ./server\config\__pycache__
 ./statistics
+./server_remote
