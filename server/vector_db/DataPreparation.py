@@ -1,5 +1,5 @@
 from datetime import datetime
-
+from pathlib import Path
 from vector_db.PDFLoader import PDFLoader
 from vector_db.MarkdownParse import MarkdownParse
 
@@ -7,10 +7,34 @@ from vector_db.MarkdownParse import MarkdownParse
 class DataPreparation:
     @staticmethod
     def loadPDF(pdf_path):
-        md_texts = PDFLoader.loader(pdf_path,True)
+        md_texts = PDFLoader.loader(pdf_path,False)
         md_data = MarkdownParse.Parse2Markdown(md_texts)
         return md_data
 
+    @staticmethod
+    def loadData(directory):
+        md_texts = []
+
+        directory = Path(directory)
+
+        for file_path in directory.rglob("*"):
+            if not file_path.is_file():
+                continue
+
+            suffix = file_path.suffix.lower()
+
+            if suffix == ".pdf":
+                # PDFLoader.loader 返回 list[str]
+                pdf_texts = PDFLoader.loader(str(file_path), False)
+                md_texts.extend(pdf_texts)
+
+            elif suffix == ".md":
+                # Markdown 文件直接读入为 str
+                with open(file_path, "r", encoding="utf-8") as f:
+                    md_texts.append(f.read())
+
+        md_data = MarkdownParse.Parse2Markdown(md_texts)
+        return md_data
 
 if __name__ == "__main__":
     path = "../data/blog_clean.pdf"

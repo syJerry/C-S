@@ -5,13 +5,14 @@ from vector_db.TestCases import retrieve_baseline, retrieve_e1, retrieve_e2, ret
 
 class Exp4k(Exp):
     def run_exp(self):
-        test_cases = self.prepare_case("evaluate/questions.txt", [2, 6, 10, 14, 18, 20], "测试最佳k值")
-        run_tests(
-            retrieve=retrieve_baseline,
-            test_cases=test_cases,
-            output_json="./statistics/topk_results.json",
-            output_csv="./statistics/topk_summary.csv",
-        )
+        for k in  [25]:
+            test_cases = self.prepare_case("evaluate/questions.txt", k, "测试最佳k值")
+            run_tests(
+                retrieve=retrieve_baseline,
+                test_cases=test_cases,
+                output_json=f"./statistics/topk/topk_results_{k}.json",
+                output_csv=f"./statistics/topk/topk_summary_{k}.csv",
+            )
 
 
 class Exp4ablation(Exp):

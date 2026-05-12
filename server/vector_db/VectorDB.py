@@ -75,7 +75,11 @@ class VectorDB:
         self.setup_retrievers()
 
     def build_doc(self, path: str):
-        self.document_data = DataPreparation.loadPDF(path)
+        if os.path.isfile(path):
+            self.document_data = DataPreparation.loadPDF(path)
+        elif os.path.isdir(path):
+            self.document_data = DataPreparation.loadData(path)
+    
 
     def buildDB(self):
         self.build_doc(json_config['data'].get("raw_data"))

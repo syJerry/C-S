@@ -7,7 +7,7 @@ import time
 
 class RateLimitedMultiQueryRetriever(MultiQueryRetriever):
     """在每次查询之间加入延迟，避免触发限流"""
-    request_delay: float = 0.8  # 每条查询间隔秒数
+    request_delay: float = 0.0  # 每条查询间隔秒数
 
     def _get_relevant_documents(
             self,

@@ -192,7 +192,6 @@ class Loader:
         if not size_map:
             logger.info("未检测到标题字号，跳过修正")
             return
-
         # 2. 建立文本→级别索引
         text_index = self.build_text_size_index(size_map)
         logger.info(f"索引标题数: {len(text_index)} 条")

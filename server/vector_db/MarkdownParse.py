@@ -26,7 +26,7 @@ class Markdown:
         logzero.logger.info(f"共解析得到{len(self.titles)}titles!")
         logzero.logger.info("*" * 60)
 
-    def merge(self):
+    def merge(self, max_size: int = 500):  # max_size 是字符数阈值
         logzero.logger.info("正在合并分块!")
         self.is_merge = True
         prev: None | Chunk = None
@@ -34,18 +34,35 @@ class Markdown:
         new_map: Dict[str, int] = {}
         new_docs: list[Document] = []
         new_count = 0
+
+        def flush(chunk: Chunk):
+            nonlocal new_count
+            new_chunks.append(chunk)
+            new_map[chunk.id] = new_count
+            new_count += 1
+            new_docs.append(chunk.to_document())
+
         for chunk in tqdm(self.chunks, "合并chunk"):
             if not prev:
                 prev = chunk
                 continue
             if chunk.heading.id != prev.heading.id:
-                new_chunks.append(prev)
-                new_map[prev.id] = new_count
-                new_count += 1
-                new_docs.append(prev.to_document())
+                # 标题变了，直接保存
+                flush(prev)
                 prev = chunk
                 continue
-            prev.content += chunk.content
+            # 标题相同，判断合并后是否超过阈值
+            if len(prev.content) + len(chunk.content) > max_size:
+                # 超过阈值，保存当前块，开启新块
+                flush(prev)
+                prev = chunk  # 注意：新块继承同一个 heading
+            else:
+                # 未超过，继续合并
+                prev.content += chunk.content
+
+        if prev:
+            flush(prev)
+
         self.docs = new_docs
         self.chunks = new_chunks
         self.chunks_map = new_map

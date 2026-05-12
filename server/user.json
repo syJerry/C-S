@@ -7,7 +7,7 @@
     "embedding": "Qwen/Qwen3-Embedding-8B"
   },
   "data": {
-    "raw_data": "./data/blog_clean.pdf"
+    "raw_data": "./data"
   },
   "vectorDB": {
     "persist_dir": "./chroma_db_test",

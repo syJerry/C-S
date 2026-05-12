@@ -8,6 +8,7 @@ from PySide6.QtWidgets import (
     QHBoxLayout
 )
 from ui.ChatMgr import chat_mgr
+from ui.VoiceWidget import VoiceWidget
 
 
 # class ChatMgrLoader(QThread):
@@ -30,16 +31,17 @@ class MainWindow(QMainWindow):
 
         self.left_container = ChatListWidget()
         self.right_container = ChatWidget()
+        # self.voice_mode = VoiceWidget(exit_func=self.exit_voice_mode)
 
         main_layout = QHBoxLayout()
         main_layout.addWidget(self.left_container, 1)
         main_layout.addWidget(self.right_container, 4)
         main_layout.setContentsMargins(0, 0, 0, 0)
         main_layout.setSpacing(0)
-        container = QWidget()
-        container.setLayout(main_layout)
+        self.container = QWidget()
+        self.container.setLayout(main_layout)
 
-        self.setCentralWidget(container)
+        self.setCentralWidget(self.container)
 
         self.left_container.new_chat_signal.connect(chat_mgr.on_new_chat)
         self.left_container.chat_change_signal.connect(self.right_container.on_chat_change)
@@ -53,6 +55,9 @@ class MainWindow(QMainWindow):
         chat_mgr.get_answer_signal.connect(self.left_container.on_get_answer)
         chat_mgr.new_chat_accomplish_signal.connect(self.left_container.on_new_chat_accomplish)
         chat_mgr.export_chat_accomplish_signal.connect(self.left_container.on_export_accomplish)
+
+    def exit_voice_mode(self):
+        self.setCentralWidget(self.container)
 
 # def make_splash_pixmap(width=500, height=300) -> QPixmap:
 #     pix = QPixmap("ui/icon/00.jpeg")

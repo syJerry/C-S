@@ -10,7 +10,8 @@ from langchain_core.embeddings import Embeddings
 from langchain_core.language_models import BaseLanguageModel
 from langchain_core.output_parsers import BaseOutputParser
 from logzero import logger
-
+import json
+from json_repair import repair_json
 from model_util.Model import llm
 from model_util.Prompt import QUERY_PROMPT
 from vector_db.Compress import Compress
@@ -34,22 +35,15 @@ class HyDEMultiQueryParser(BaseOutputParser[List[str]]):
     """
 
     def parse(self, text: str) -> List[str]:
+        print(text)
         queries = []
-        extend_contents = []
-        for line in text.strip().split("\n"):
-            line = line.strip()
-            if not line:
-                continue
-            # 去掉前缀标签（查询1:、假设文档: 等）
-            cleaned = re.sub(r"^(查询\d+|假设文档)\s*[:：]\s*", "", line).strip()
-            hyp_doc = re.sub(r"^假设文档\d*\s*[:：]\s*", "", line).strip()
-            if cleaned:
-                extend_contents.append(cleaned)
-            if hyp_doc:
-                queries.append(hyp_doc)
-        print(f"=== 解析后共 {len(queries)} 条查询 ===")
-        for i, q in enumerate(queries, 1):
-            print(f"  [{i}] {q}")
+        text = repair_json(text)
+        data = json.loads(text)
+
+        queries = list(data.values())
+
+        # for i, q in enumerate(queries, 1):
+        #     print(f"  [{i}] {q}")
         return queries
 
 
@@ -59,7 +53,7 @@ class Retriever:
         self.title_retriever = None
         self.bm25_retriever = None
         # self.vector_store = None
-        self.score_threshold = 0.5
+        self.score_threshold = 0.8
 
         # 压缩器（需调用 setup_compressor 后才可用）
         self.compressor = None
@@ -116,12 +110,13 @@ class Retriever:
 
     def _hybrid_search(self, query: str, top_k: int) -> List[Document]:
         """混合检索 - 结合向量检索和BM25检索，使用 Cross-Encoder 重排"""
-        try:
-            titles_docs = self.title_retriever.invoke(query)
-            vector_docs = self.vector_retriever_hyde.invoke(query)
-        except:
-            titles_docs = []
-            vector_docs = []
+        # try:
+        titles_docs = self.title_retriever.invoke(query)
+        vector_docs = self.vector_retriever_hyde.invoke(query)
+        # except Exception as e:
+        #     logger.error(f"检索过程中发生错误: {e}")
+        #     titles_docs = []
+        #     vector_docs = []
         title_filter = self._process_titles(titles_docs)
         bm25_docs = self.bm25_retriever.get_relevant_documents(query)
 
@@ -180,6 +175,8 @@ class Retriever:
     def _deduplicate(docs: List[Document]) -> List[Document]:
         seen, result = set(), []
         for doc in docs:
+            if(doc.page_content == "") 
+                continue
             if doc.page_content not in seen:
                 seen.add(doc.page_content)
                 result.append(doc)

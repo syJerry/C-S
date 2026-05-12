@@ -1,2 +1,4 @@
 ./server/chroma_db_test
 ./client/.idea
+./server\config\__pycache__
+./statistics

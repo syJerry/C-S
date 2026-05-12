@@ -1,39 +1,38 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
 import re
+import sys
+from pathlib import Path
 
 
-def clean_newlines_simple(input_file, output_file=None):
-    """
-    简化版：处理单个文件
-    """
-    # 读取文件
-    with open(input_file, 'r', encoding='utf-8') as f:
-        content = f.read()
-
-    # 使用正则表达式处理
-    # 将奇数个连续的换行符替换为\n\n
-    # 这里使用了一个技巧：将两个\n替换为特殊字符，然后删除所有单个\n，最后恢复
-    result = re.sub(r'\n{3,}', lambda m: '\n\n' + '\n' * ((len(m.group()) - 2) % 2), content)
-    result = result.replace('\n\n', 'TEMP_DOUBLE_NEWLINE')
-    result = result.replace('\n', '')
-    result = result.replace('TEMP_DOUBLE_NEWLINE', '\n\n')
-
-    # 写入文件
-    if output_file is None:
-        output_file = input_file
-
-    with open(output_file, 'w', encoding='utf-8') as f:
-        f.write(result)
-
-    print(f"处理完成！结果已保存到: {output_file}")
+def remove_div_blocks(text: str) -> str:
+    # 匹配单行或多行的 <div ...>...</div> 块
+    pattern = r'<div\b[^>]*>.*?</div>'
+    cleaned = re.sub(pattern, '', text, flags=re.DOTALL | re.IGNORECASE)
+    # 清理可能产生的多余空行（超过2个连续空行压缩为1个）
+    cleaned = re.sub(r'\n{3,}', '\n\n', cleaned)
+    return cleaned
 
 
-# 使用示例
-if __name__ == "__main__":
-    # 直接调用
-    clean_newlines_simple("blog_clean.txt", "blog_clean_1.txt")
+def process_directory(root_dir: str):
+    root = Path(root_dir)
+    md_files = list(root.rglob('*.md'))
+    
+    if not md_files:
+        print("未找到任何 .md 文件")
+        return
 
-    # 或者覆盖原文件
-    # clean_newlines_simple("input.txt")
+    for md_file in md_files:
+        original = md_file.read_text(encoding='utf-8')
+        cleaned = remove_div_blocks(original)
+        
+        if cleaned != original:
+            md_file.write_text(cleaned, encoding='utf-8')
+            print(f"✅ 已处理: {md_file}")
+        else:
+            print(f"⏭️  无需处理: {md_file}")
+
+    print(f"\n完成，共扫描 {len(md_files)} 个文件")
+
+
+if __name__ == '__main__':
+    target = sys.argv[1] if len(sys.argv) > 1 else '.'
+    process_directory(target)
